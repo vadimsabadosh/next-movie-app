@@ -1,0 +1,61 @@
+.modal {
+	&__overlay {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		background-color: rgba(76, 76, 76, 0.6);
+		z-index: 10;
+		overflow: auto;
+		padding: 10px;
+		text-align: center;
+
+		&:before {
+			display: inline-block;
+			vertical-align: middle;
+			content: ' ';
+			height: 100%;
+		}
+	}
+
+	&__dialog {
+		margin: 10px;
+		position: relative;
+		display: inline-block;
+		text-align: left;
+		vertical-align: middle;
+		width: 400px;
+
+		@include sm {
+			width: 90%;
+			margin: 0 auto;
+		}
+	}
+
+	&__content {
+		width: 100%;
+		position: relative;
+	}
+}
+
+.close {
+	position: absolute;
+	right: 13px;
+	top: 10px;
+	width: 26px;
+	height: 26px;
+	font-size: 32px;
+	line-height: 1;
+	text-align: center;
+	color: #fff;
+	border: none;
+	outline: none;
+	border-radius: 50%;
+	z-index: 1;
+	background: none;
+
+	&:hover {
+		opacity: 0.6;
+	}
+}

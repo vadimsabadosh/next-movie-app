@@ -1,0 +1,29 @@
+.inputBlock {
+	display: block;
+	position: relative;
+	margin-bottom: 20px;
+
+	&_label {
+		color: #fff;
+		font-size: 14px;
+		margin-bottom: 8px;
+		display: block;
+	}
+	&_input {
+		display: block;
+		width: 100%;
+		padding: 10px 15px;
+		border-radius: 5px;
+		border: solid 2px transparent;
+
+		&_border {
+			border: solid 2px #ff0000;
+		}
+	}
+	&_error {
+		color: #ff0000;
+		position: absolute;
+		bottom: -14px;
+		font-size: 10px;
+	}
+}

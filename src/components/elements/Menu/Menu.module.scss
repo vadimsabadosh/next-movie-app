@@ -1,0 +1,37 @@
+.menu {
+	display: flex;
+	align-items: center;
+
+	&_item {
+		margin: 0 27px;
+
+		@include sm {
+			margin: 0 20px;
+		}
+	}
+
+	&_link {
+		font-weight: bold;
+		font-size: 16px;
+		line-height: 20px;
+		text-align: center;
+		color: #ffffff;
+		opacity: 0.5;
+		position: relative;
+
+		&Active {
+			opacity: 1;
+
+			&::after {
+				background: linear-gradient(316.53deg, #26fff2 13.2%, #326cff 71.54%);
+				border-radius: 50px;
+				height: 2px;
+				content: '';
+				width: 100%;
+				position: absolute;
+				top: calc(100% + 5px);
+				left: 0;
+			}
+		}
+	}
+}

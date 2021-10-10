@@ -1,0 +1,24 @@
+.loginButton {
+	background: none;
+}
+.login {
+	width: 75px;
+	text-align: right;
+	position: relative;
+
+	&__username {
+		font-size: 16px;
+		margin-right: 10px;
+		line-height: 28px;
+		position: absolute;
+		right: 100%;
+		width: max-content;
+	}
+}
+.logout {
+	background: none;
+	border: 1px solid #fff;
+	padding: 4px 10px;
+	color: #fff;
+	border-radius: 4px;
+}

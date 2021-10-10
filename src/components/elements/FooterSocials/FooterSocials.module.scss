@@ -1,0 +1,12 @@
+.footer {
+	&_socials {
+		display: flex;
+		align-items: center;
+		padding-left: 0;
+	}
+
+	&_socialLink {
+		margin-right: 13px;
+		display: block;
+	}
+}

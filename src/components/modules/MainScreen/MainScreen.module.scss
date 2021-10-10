@@ -1,0 +1,116 @@
+.main {
+	background: url('/images/main-bg.jpg') no-repeat center / cover;
+	height: 590px;
+	padding: 150px 0 0 240px;
+
+	@include sm {
+		padding: 30px 0 0 40px;
+		height: 420px;
+	}
+
+	&_title {
+		font-family: 'Marcellus';
+		font-style: normal;
+		font-weight: normal;
+		font-size: 100px;
+		line-height: 1;
+		margin: 0;
+
+		@include sm {
+			font-size: 50px;
+		}
+	}
+
+	&_triggers {
+		margin-top: 35px;
+		display: flex;
+		align-items: center;
+		margin-bottom: 24px;
+	}
+
+	&_text {
+		font-weight: 800;
+		font-size: 16px;
+		line-height: 10px;
+		margin-right: 18px;
+	}
+
+	&_limit {
+		position: relative;
+		padding: 8px 15px;
+		display: inline-block;
+		font-weight: 800;
+		font-size: 16px;
+		line-height: 1;
+		margin-right: 18px;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			border-radius: 50px;
+			padding: 2px;
+			background: linear-gradient(to right, #26fff2, #326cff);
+			-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+			-webkit-mask-composite: destination-out;
+			mask-composite: exclude;
+		}
+	}
+
+	&_rate {
+		font-weight: 800;
+		font-size: 16px;
+		line-height: 1;
+		position: relative;
+		padding-left: 23px;
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			background: url('/images/Rating.svg');
+			width: 16px;
+			height: 16px;
+			bottom: 0;
+		}
+	}
+
+	&_description {
+		font-size: 18px;
+		line-height: 28px;
+		color: #c2c2c2;
+		max-width: 468px;
+		margin-bottom: 24px;
+	}
+
+	&_button {
+		background: rgb(38, 255, 242);
+		background: -moz-linear-gradient(333deg, rgba(38, 255, 242, 1) 0%, rgba(50, 108, 255, 1) 100%);
+		background: -webkit-linear-gradient(
+			333deg,
+			rgba(38, 255, 242, 1) 0%,
+			rgba(50, 108, 255, 1) 100%
+		);
+		background: linear-gradient(333deg, rgba(38, 255, 242, 1) 0%, rgba(50, 108, 255, 1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#26fff2",endColorstr="#326cff",GradientType=1);
+		padding: 15px 25px;
+		display: inline-block;
+		box-shadow: 0px 4px 50px rgba(50, 108, 255, 0.5);
+		border-radius: 100px;
+		color: #fff;
+		font-weight: 800;
+		font-size: 16px;
+		line-height: 16px;
+
+		&_img {
+			background: url('/images/play.svg');
+			display: inline-block;
+			width: 14px;
+			margin-right: 15px;
+			height: 17px;
+		}
+	}
+}

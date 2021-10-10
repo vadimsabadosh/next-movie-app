@@ -1,0 +1,50 @@
+.form {
+	border-radius: 25px;
+	background: url('/images/login-bg.jpg') no-repeat center / cover;
+	min-height: 550px;
+	padding: 50px 40px 40px;
+	width: 100%;
+
+	@include sm {
+		min-height: 500px;
+		padding: 50px 20px 30px;
+	}
+
+	&_title {
+		text-align: left;
+		font-size: 22px;
+		margin-bottom: 30px;
+		font-weight: 800;
+		position: relative;
+		padding-left: 18px;
+
+		&::before {
+			position: absolute;
+			content: '';
+			background: linear-gradient(316.53deg, #26fff2 13.2%, #326cff 71.54%);
+			border-radius: 50px;
+			width: 8px;
+			height: 100%;
+			left: 0;
+			top: 0;
+		}
+	}
+
+	&_question {
+		margin-top: 40px;
+		text-align: center;
+		color: #e7e7e7;
+		font-size: 14px;
+	}
+
+	&_signup {
+		background: none;
+		color: #26fff2;
+		font-weight: 900;
+	}
+}
+
+.button {
+	width: 100%;
+	margin-top: 30px;
+}

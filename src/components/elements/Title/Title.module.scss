@@ -1,0 +1,20 @@
+.title {
+	font-weight: bold;
+	font-size: 28px;
+	line-height: 35px;
+	position: relative;
+	padding-left: 18px;
+	margin-bottom: 40px;
+	display: block;
+
+	&::before {
+		position: absolute;
+		content: '';
+		background: linear-gradient(316.53deg, #26fff2 13.2%, #326cff 71.54%);
+		border-radius: 50px;
+		width: 8px;
+		height: 100%;
+		left: 0;
+		top: 0;
+	}
+}

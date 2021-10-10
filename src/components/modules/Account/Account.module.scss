@@ -1,0 +1,106 @@
+.account {
+	padding: 25px;
+
+	&__logout {
+		color: #fff;
+		padding: 0;
+		border: none;
+		background: none;
+		text-decoration: underline;
+	}
+}
+.tabs {
+	display: flex;
+	width: 100%;
+	margin-top: 25px;
+	align-items: flex-start;
+}
+.tab {
+	padding: 15px 30px;
+	cursor: pointer;
+
+	&__left {
+		width: 20%;
+		margin: 0 20px 0 0;
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		background: #2d2d2d;
+		border-radius: 10px;
+		overflow: hidden;
+		margin-bottom: 20px;
+	}
+
+	&Active {
+		background: #181818;
+		color: #fff;
+		position: relative;
+		padding-left: 30px;
+
+		&::before {
+			background: -webkit-linear-gradient(133.47deg, #26fff2 13.2%, #326cff 71.54%);
+			background: linear-gradient(316.53deg, #26fff2 13.2%, #326cff 71.54%);
+			border-radius: 50px;
+			height: 2px;
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 10px;
+			right: 10px;
+		}
+	}
+
+	&__panelActive {
+		width: 79%;
+		display: block;
+		background: #2d2d2d;
+		border-radius: 10px;
+		padding: 15px 30px;
+	}
+}
+.panel {
+	&__title {
+		text-align: left;
+		font-size: 22px;
+		margin-bottom: 30px;
+		font-weight: 800;
+		position: relative;
+		padding-left: 18px;
+
+		&::before {
+			position: absolute;
+			content: '';
+			background: linear-gradient(316.53deg, #26fff2 13.2%, #326cff 71.54%);
+			border-radius: 50px;
+			width: 8px;
+			height: 100%;
+			left: 0;
+			top: 0;
+		}
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		margin-bottom: 15px;
+	}
+
+	&__name {
+		width: 150px;
+		font-size: 18px;
+		font-weight: 600;
+	}
+
+	&__value {
+		font-size: 16px;
+	}
+
+	&__preloader {
+		height: 250px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}

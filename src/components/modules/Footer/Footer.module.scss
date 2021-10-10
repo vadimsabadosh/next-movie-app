@@ -1,0 +1,52 @@
+.footer {
+	padding: 70px 0;
+	background: #101012;
+
+	&_wrapper {
+		width: 70%;
+		margin: 0 auto;
+		display: flex;
+
+		@include sm {
+			width: 90%;
+			flex-direction: column;
+		}
+	}
+
+	&_logo {
+		margin-right: 80px;
+
+		@include sm {
+			width: fit-content;
+			margin: 0 auto;
+		}
+	}
+
+	&_linkList {
+		columns: 4;
+		column-gap: 50px;
+		padding-left: 0;
+
+		@include sm {
+			columns: 1;
+		}
+	}
+
+	&_link {
+		color: #fff;
+		margin-bottom: 15px;
+		display: block;
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 20px;
+		color: #c2c2c2;
+
+		@include sm {
+			text-align: center;
+		}
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
