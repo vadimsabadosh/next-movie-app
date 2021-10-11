@@ -18,7 +18,7 @@ const MoviesPage: React.FC<{ movies: TMovie[] }> = ({ movies }) => {
 }
 
 export default MoviesPage
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
+export const getServerSideProps: GetServerSideProps = async () => {
 	try {
 		const response = await apolloClient.query({
 			fetchPolicy: 'network-only',

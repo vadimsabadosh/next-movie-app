@@ -18,7 +18,7 @@ const RegisterTrigger: React.FC = () => {
 		<>
 			<div className="container">
 				<div className={styles.banner}>
-					<div className={styles.banner_image}>
+					<div className={styles.banner_image} data-cy="register-trigger">
 						<h2 className={styles.banner_title}>
 							Ты еще не с нами?
 							<br /> Присоединяйся к нам

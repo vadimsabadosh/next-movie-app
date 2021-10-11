@@ -1,0 +1,56 @@
+{
+  "polyfillFiles": [
+    "static/chunks/polyfills-a40ef1678bae11e696dba45124eadd70.js"
+  ],
+  "devFiles": [],
+  "ampDevFiles": [],
+  "lowPriorityFiles": [
+    "static/45DEl1CSGYVbamO2jX_Yh/_buildManifest.js",
+    "static/45DEl1CSGYVbamO2jX_Yh/_ssgManifest.js"
+  ],
+  "pages": {
+    "/": [
+      "static/chunks/webpack-9f47ca34b5ce0b13ab89.js",
+      "static/chunks/framework-c93ed74a065331c4bd75.js",
+      "static/chunks/main-8d15616dad332ac01c02.js",
+      "static/css/e2198f86bebe87727bb3.css",
+      "static/chunks/pages/index-8a27dac0bbb975b2206e.js"
+    ],
+    "/_app": [
+      "static/chunks/webpack-9f47ca34b5ce0b13ab89.js",
+      "static/chunks/framework-c93ed74a065331c4bd75.js",
+      "static/chunks/main-8d15616dad332ac01c02.js",
+      "static/css/1dbd6989a81d3468d13e.css",
+      "static/chunks/pages/_app-2aac8a54846a2964915b.js"
+    ],
+    "/_error": [
+      "static/chunks/webpack-9f47ca34b5ce0b13ab89.js",
+      "static/chunks/framework-c93ed74a065331c4bd75.js",
+      "static/chunks/main-8d15616dad332ac01c02.js",
+      "static/chunks/pages/_error-737a04e9a0da63c9d162.js"
+    ],
+    "/account": [
+      "static/chunks/webpack-9f47ca34b5ce0b13ab89.js",
+      "static/chunks/framework-c93ed74a065331c4bd75.js",
+      "static/chunks/main-8d15616dad332ac01c02.js",
+      "static/chunks/288-429963a62b9b503efcd0.js",
+      "static/css/351e6fb84421c9a447dd.css",
+      "static/chunks/pages/account-ae1bc25ef736d5c9c54c.js"
+    ],
+    "/movies": [
+      "static/chunks/webpack-9f47ca34b5ce0b13ab89.js",
+      "static/chunks/framework-c93ed74a065331c4bd75.js",
+      "static/chunks/main-8d15616dad332ac01c02.js",
+      "static/css/f033574c285c93a3ce13.css",
+      "static/chunks/pages/movies-26ac3307585faeb503f9.js"
+    ],
+    "/movies/[id]": [
+      "static/chunks/webpack-9f47ca34b5ce0b13ab89.js",
+      "static/chunks/framework-c93ed74a065331c4bd75.js",
+      "static/chunks/main-8d15616dad332ac01c02.js",
+      "static/css/cac4d558b9e292ba4451.css",
+      "static/chunks/pages/movies/[id]-2a9f856a33a009c0128a.js"
+    ]
+  },
+  "ampFirstPages": []
+}

@@ -1,0 +1,16 @@
+{
+  "..\\src\\components\\elements\\Login\\Login.tsx -> src/components/elements/Modal": {
+    "id": 515,
+    "files": [
+      "static/css/55fb2eb684395d9eb5b1.css",
+      "static/chunks/515.6a8b979bd43ce84bba7b.js"
+    ]
+  },
+  "..\\src\\components\\elements\\RegisterTrigger\\RegisterTrigger.tsx -> src/components/elements/Modal": {
+    "id": 515,
+    "files": [
+      "static/css/55fb2eb684395d9eb5b1.css",
+      "static/chunks/515.6a8b979bd43ce84bba7b.js"
+    ]
+  }
+}

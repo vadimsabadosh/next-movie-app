@@ -28,7 +28,7 @@ const Login: React.FC = () => {
 						<a className={styles.logout}>Аккаунт</a>
 					</Link>
 				) : (
-					<button className={styles.loginButton} onClick={toggleLogin}>
+					<button data-cy="login-button" className={styles.loginButton} onClick={toggleLogin}>
 						<Image src={loginPic} alt="Войти" title="Войти" />
 					</button>
 				)}

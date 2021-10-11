@@ -57,7 +57,9 @@ const WantToWatchTab: React.FC<{ id: string }> = ({ id }) => {
 const PersonalDataTab: React.FC<{ user: any }> = ({ user }) => {
 	return (
 		<div className={styles.panel}>
-			<h3 className={styles.panel__title}>Персональная информация</h3>
+			<h3 className={styles.panel__title} data-cy="account-title">
+				Персональная информация
+			</h3>
 			<div className={styles.panel__item}>
 				<div className={styles.panel__name}>Имя:</div>
 				<div className={styles.panel__value}>{user?.firstName}</div>

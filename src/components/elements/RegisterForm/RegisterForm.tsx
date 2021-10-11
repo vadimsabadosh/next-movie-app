@@ -95,7 +95,9 @@ const RegisterForm: React.FC<{ openLogin: () => void; toggleModal: () => void }>
 
 	return (
 		<div className={styles.form}>
-			<div className={styles.form_title}>Регистрация</div>
+			<div className={styles.form_title} data-cy="register">
+				Регистрация
+			</div>
 			<form onSubmit={handleSubmit(onSubmit)}>
 				{registerFields.map((field) => (
 					<Input

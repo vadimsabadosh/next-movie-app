@@ -66,7 +66,9 @@ const LoginForm: React.FC<{ openRegister: () => void; toggleModal: () => void }>
 
 	return (
 		<div className={styles.loginForm}>
-			<div className={styles.loginForm_title}>Авторизация</div>
+			<div className={styles.loginForm_title} data-cy="login-title">
+				Авторизация
+			</div>
 			<form onSubmit={handleSubmit(onSubmit)}>
 				<Input
 					register={register}
