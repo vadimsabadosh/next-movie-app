@@ -1,29 +1,38 @@
 {
-  "name": "client",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
-  },
-  "dependencies": {
-    "@apollo/client": "^3.4.15",
-    "@hookform/resolvers": "^2.8.1",
-    "classnames": "^2.2.6",
-    "graphql": "^15.6.0",
-    "jwt-decode": "^3.1.2",
-    "next": "11.1.2",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "react-hook-form": "^7.17.0",
-    "react-tabs": "^3.2.2",
-    "react-use": "^17.3.1",
-    "sass": "^1.42.1",
-    "yup": "^0.32.9"
-  },
-  "devDependencies": {
-    "@types/react": "17.0.24",
-    "typescript": "4.4.3"
-  }
+	"name": "client",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"cypress": "cypress open",
+		"cypress:headless": "cypress run",
+		"e2e": "start-server-and-test dev 3000 cypress",
+		"e2e:headless": "start-server-and-test dev 3000 cypress:headless"
+	},
+	"dependencies": {
+		"@apollo/client": "^3.4.15",
+		"@hookform/resolvers": "^2.8.1",
+		"classnames": "^2.2.6",
+		"graphql": "^15.6.0",
+		"jwt-decode": "^3.1.2",
+		"next": "11.1.2",
+		"react": "17.0.2",
+		"react-dom": "17.0.2",
+		"react-hook-form": "^7.17.0",
+		"react-tabs": "^3.2.2",
+		"react-use": "^17.3.1",
+		"sass": "^1.42.1",
+		"yup": "^0.32.9"
+	},
+	"devDependencies": {
+		"@types/react": "17.0.24",
+		"cypress": "^8.5.0",
+		"prettier": "^2.4.1",
+		"prettier-eslint": "^13.0.0",
+		"start-server-and-test": "^1.14.0",
+		"typescript": "4.4.3"
+	},
+	"proxy": "https://radiant-oasis-74595.herokuapp.com"
 }
