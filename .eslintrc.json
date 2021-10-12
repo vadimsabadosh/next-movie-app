@@ -1,17 +1,21 @@
 {
 	"root": true,
 	"parser": "@typescript-eslint/parser",
+	"plugins": ["@typescript-eslint", "react", "prettier"],
 	"extends": [
 		"eslint:recommended",
 		"plugin:react/recommended",
 		"plugin:@typescript-eslint/recommended",
 		"plugin:import/errors",
 		"plugin:import/warnings",
+		"plugin:import/typescript",
 		"plugin:jsx-a11y/recommended",
 		"plugin:react-hooks/recommended",
 		"plugin:prettier/recommended",
 		"plugin:prettier/@typescript-eslint",
-		"airbnb"
+		"airbnb",
+		"airbnb/hooks",
+		"prettier"
 	],
 	"env": {
 		"browser": true,
@@ -34,7 +38,6 @@
 			"jsx": true
 		}
 	},
-	"plugins": ["@typescript-eslint", "react", "prettier"],
 	"rules": {
 		"react/react-in-jsx-scope": "off",
 		"@typescript-eslint/ban-ts-comment": "warn",
