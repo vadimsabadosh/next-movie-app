@@ -75,7 +75,6 @@ const RegisterForm: React.FC<{ openLogin: () => void; toggleModal: () => void }>
 		async onCompleted(data) {
 			context.login(data.registerUser)
 			toggleModal()
-			await router.push('/account', undefined, { shallow: true })
 		},
 		onError(err) {
 			setErrors(err.graphQLErrors[0].extensions.errors)

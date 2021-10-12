@@ -23,8 +23,8 @@ describe('first test kit', () => {
 					.type('test1234')
 					.should('have.value', 'test1234')
 				cy.wrap(form).submit()
-				cy.location('pathname', { timeout: 5000 }).should('include', '/account')
-				cy.get('[data-cy="account-title"]').should('contain', 'Персональная информация')
+				cy.wait(5000)
+				cy.get('[data-cy="account-btn"]').should('contain', 'Аккаунт')
 			})
 	})
 	it('movies page test', () => {

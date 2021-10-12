@@ -1,23 +1,23 @@
 import React from 'react'
-import Movies from 'src/components/modules/Movies'
+import MoviesPage from 'src/components/modules/MoviesPage'
 import { apolloClient } from 'src/apollo/apollo-client'
 import { GET_ALL_MOVIES } from 'src/graphql/query'
 import { GetServerSideProps } from 'next'
 import { TMovie } from 'src/types'
 import Head from 'next/head'
 
-const MoviesPage: React.FC<{ movies: TMovie[] }> = ({ movies }) => {
+const Movies: React.FC<{ movies: TMovie[] }> = ({ movies }) => {
 	return (
 		<>
 			<Head>
 				<title>Список фильмов</title>
 			</Head>
-			<Movies movies={movies} />
+			<MoviesPage movies={movies} />
 		</>
 	)
 }
 
-export default MoviesPage
+export default Movies
 export const getServerSideProps: GetServerSideProps = async () => {
 	try {
 		const response = await apolloClient.query({

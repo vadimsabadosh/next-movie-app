@@ -6,6 +6,7 @@ import Head from 'next/head'
 import { apolloClient } from 'src/apollo/apollo-client'
 import { ApolloProvider } from '@apollo/client'
 import { AuthProvider } from 'src/context/auth'
+import NextNprogress from 'nextjs-progressbar'
 
 function MyApp({ Component, pageProps }: AppProps) {
 	return (
@@ -22,6 +23,14 @@ function MyApp({ Component, pageProps }: AppProps) {
 			<AuthProvider>
 				<ApolloProvider client={apolloClient}>
 					<BaseLayout>
+						<NextNprogress
+							color="#29D"
+							startPosition={0.3}
+							stopDelayMs={200}
+							height={3}
+							showOnShallow={true}
+							options={{ easing: 'ease', speed: 500 }}
+						/>
 						<Component {...pageProps} />
 					</BaseLayout>
 				</ApolloProvider>

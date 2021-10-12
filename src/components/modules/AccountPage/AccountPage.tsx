@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './Account.module.scss'
+import styles from './AccountPage.module.scss'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
 import MovieList from 'src/components/elements/MovieList'
 import { resetIdCounter } from 'react-tabs'
@@ -76,14 +76,14 @@ const PersonalDataTab: React.FC<{ user: any }> = ({ user }) => {
 	)
 }
 
-const Account = () => {
+const AccountPage = () => {
 	const { state, logout } = useAuth()
 	const { user } = state
 	const router = useRouter()
 
 	const onLogout = async () => {
-		logout()
 		await router.push('/')
+		logout()
 	}
 	return (
 		<div className="container">
@@ -121,4 +121,4 @@ const Account = () => {
 	)
 }
 
-export default WithAuth(Account)
+export default WithAuth(AccountPage)
