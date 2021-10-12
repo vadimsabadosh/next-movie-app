@@ -7,7 +7,6 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
 import { useMutation } from '@apollo/client'
 import { REGISTER_USER } from 'src/graphql/mutation'
-import { useRouter } from 'next/router'
 import { useAuth } from 'src/context/auth'
 import Preloader from 'src/components/elements/Preloader'
 import FormErrors from '../FormErrors'
@@ -56,7 +55,6 @@ const RegisterForm: React.FC<{ openLogin: () => void; toggleModal: () => void }>
 	toggleModal
 }) => {
 	const [apiErrors, setErrors] = useState({})
-	const router = useRouter()
 	const context = useAuth()
 	const {
 		register,
