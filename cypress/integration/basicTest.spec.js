@@ -38,4 +38,24 @@ describe('first test kit', () => {
 		cy.get('[data-cy="register-trigger"]').contains('Зарегистрироваться').click()
 		cy.get('[data-cy="register"]').should('contain', 'Регистрация')
 	})
+	it('expectation of movies query ', () => {
+		const movieQuery = `
+		query getAllMovies {
+			getAllMovies {
+				id
+				backdrop_path
+				original_title
+				overview
+				popularity
+				poster_path
+				release_date
+				title
+				vote_average
+			}
+		}
+		`
+		cy.requestGraphQl(movieQuery).then((response) => {
+			expect(response.body.data.getAllMovies[0].id).to.be.eq('550988')
+		})
+	})
 })

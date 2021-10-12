@@ -8,12 +8,13 @@
 		"start": "next start",
 		"cypress": "cypress open",
 		"cypress:headless": "cypress run",
-		"e2e": "start-server-and-test dev 3000 cypress",
+		"e2e": "start-server-and-test dev 3000 cypress ",
 		"e2e:headless": "start-server-and-test dev 3000 cypress:headless"
 	},
 	"dependencies": {
 		"@apollo/client": "^3.4.15",
 		"@hookform/resolvers": "^2.8.1",
+		"babel-plugin-istanbul": "^6.0.0",
 		"classnames": "^2.2.6",
 		"graphql": "^15.6.0",
 		"jwt-decode": "^3.1.2",
@@ -27,10 +28,27 @@
 		"yup": "^0.32.9"
 	},
 	"devDependencies": {
+		"@cypress/react": "^5.10.1",
+		"@cypress/webpack-dev-server": "^1.6.0",
 		"@types/react": "17.0.24",
+		"@typescript-eslint/eslint-plugin": "^5.0.0",
+		"@typescript-eslint/parser": "^5.0.0",
+		"babel-eslint": "^10.1.0",
 		"cypress": "^8.5.0",
+		"eslint": "^7.32.0",
+		"eslint-config-airbnb": "^18.2.1",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-import": "^2.24.2",
+		"eslint-plugin-jsx-a11y": "^6.4.1",
+		"eslint-plugin-prettier": "^4.0.0",
+		"eslint-plugin-react": "^7.26.1",
+		"eslint-plugin-react-hooks": "^4.2.0",
+		"html-webpack-plugin": "^5.3.2",
+		"prettier": "^2.4.1",
 		"start-server-and-test": "^1.14.0",
-		"typescript": "4.4.3"
+		"typescript": "4.4.3",
+		"webpack": "^5.58.1",
+		"webpack-dev-server": "^3.11.2"
 	},
 	"proxy": "https://radiant-oasis-74595.herokuapp.com"
 }
