@@ -28,6 +28,7 @@
 		"yup": "^0.32.9"
 	},
 	"devDependencies": {
+		"@cypress/code-coverage": "^3.9.11",
 		"@cypress/react": "^5.10.1",
 		"@cypress/webpack-dev-server": "^1.6.0",
 		"@types/react": "17.0.24",
