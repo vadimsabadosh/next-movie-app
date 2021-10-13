@@ -37,7 +37,7 @@ test:
   script:
     - npm ci
     - npm run start:ci &
-    - npm run e2e
+    - npm run e2e:run
 
 deploy:
   stage: deploy
