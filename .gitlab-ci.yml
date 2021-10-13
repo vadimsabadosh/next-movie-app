@@ -1,6 +1,7 @@
 stages:
   - test
   - build
+  - deploy
 
 image: docker:19.03.10
 services:
@@ -28,4 +29,13 @@ test:
   stage: test
   image: node:14-alpine
   script:
-    - npm run e2e:headless
+    - npm run e2e:run
+
+deploy:
+  stage: deploy
+  image: node:14-alpine
+  script:
+    - git push https://$HEROKU_USER:$HEROKU_API_KEY@git.heroku.com/client-side-next-js-project.git HEAD:master
+    - deployed to the heroku server
+  only:
+    - master
