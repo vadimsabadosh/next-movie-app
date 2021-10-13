@@ -1,0 +1,27 @@
+stages:
+  - build
+  - test
+
+build:
+  stage: build
+  image:
+    name: node:14-alpine
+  artifacts:
+    paths:
+      - dist
+      - node_modules
+    expire_in: 1 week
+
+  cache:
+    paths:
+      - node_modules
+  before_script:
+    - npm ci
+  script:
+    - npm run build
+
+test:
+  stage: test
+  image: node:14-alpine
+  script:
+    - npm install
