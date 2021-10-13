@@ -3,6 +3,16 @@ stages:
   - build
   - deploy
 
+variables:
+  CYPRESS_CACHE_FOLDER: '$CI_PROJECT_DIR/cache/Cypress'
+
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - .npm
+    - cache/Cypress
+    - node_modules
+
 image: docker:19.03.10
 services:
   - docker:18.09-dind
@@ -16,20 +26,18 @@ build:
       - dist
       - node_modules
     expire_in: 1 week
-
-  cache:
-    paths:
-      - node_modules
   before_script:
     - npm ci
   script:
     - npm run build
 
 test:
+  image: node:latest
   stage: test
-  image: cypress/browsers:node12.14.1-chrome85-ff81
   script:
-    - npm run cypress:run
+    - npm ci
+    - npm run start:ci &
+    - npm run e2e
 
 deploy:
   stage: deploy
@@ -37,5 +45,7 @@ deploy:
   script:
     - git push https://$HEROKU_USER:$HEROKU_API_KEY@git.heroku.com/client-side-next-js-project.git HEAD:master
     - deployed to the heroku server
+  variables:
+    NEXT_PUBLIC_API_HOST: https://radiant-oasis-74595.herokuapp.com/graphql
   only:
     - master
