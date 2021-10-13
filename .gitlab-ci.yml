@@ -27,7 +27,7 @@ build:
 
 test:
   stage: test
-  image: node:14-alpine
+  image: cypress/browsers:node12.14.1-chrome85-ff81
   script:
     - npm run cypress:run
 
