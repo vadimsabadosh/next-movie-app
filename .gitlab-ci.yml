@@ -29,7 +29,7 @@ test:
   stage: test
   image: node:14-alpine
   script:
-    - npm run e2e:run
+    - npm run cypress:run
 
 deploy:
   stage: deploy
