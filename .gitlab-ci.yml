@@ -3,16 +3,6 @@ stages:
   - build
   - deploy
 
-variables:
-  CYPRESS_CACHE_FOLDER: '$CI_PROJECT_DIR/cache/Cypress'
-
-cache:
-  key: ${CI_COMMIT_REF_SLUG}
-  paths:
-    - .npm
-    - cache/Cypress
-    - node_modules
-
 image: docker:19.03.10
 services:
   - docker:18.09-dind
@@ -21,6 +11,11 @@ build:
   stage: build
   image:
     name: node:14-alpine
+  cache:
+    paths:
+      - .npm
+      - cache/Cypress
+      - node_modules
   artifacts:
     paths:
       - dist
@@ -38,6 +33,11 @@ test:
     - echo $NEXT_PUBLIC_API_HOST
     - npm ci
     - npm run e2e:run
+  cache:
+    paths:
+      - .npm
+      - cache/Cypress
+      - node_modules
 
 deploy:
   stage: deploy
