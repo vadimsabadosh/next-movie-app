@@ -14,6 +14,9 @@ module.exports = {
 		includePaths: [path.join(__dirname, 'styles')],
 		cssModules: true,
 		prependData: `@import "mixin/mixins";`
+	},
+	env: {
+		NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL
 	}
 	// basePath: '/project'
 }
