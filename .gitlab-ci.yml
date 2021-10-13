@@ -30,7 +30,6 @@ test:
   image: node:latest
   stage: test
   script:
-    - echo $NEXT_PUBLIC_API_HOST
     - npm ci
     - npm run e2e:run
   cache:
@@ -45,7 +44,5 @@ deploy:
   script:
     - git push https://$HEROKU_USER:$HEROKU_API_KEY@git.heroku.com/client-side-next-js-project.git HEAD:master
     - deployed to the heroku server
-  variables:
-    NEXT_PUBLIC_API_HOST: $NEXT_PUBLIC_API_HOST
   only:
     - master
