@@ -13,8 +13,6 @@ build:
     name: node:14-alpine
   cache:
     paths:
-      - .npm
-      - cache/Cypress
       - node_modules
   artifacts:
     paths:
@@ -34,8 +32,6 @@ test:
     - npm run e2e:run
   cache:
     paths:
-      - .npm
-      - cache/Cypress
       - node_modules
 
 deploy:
@@ -45,4 +41,4 @@ deploy:
     - git push https://$HEROKU_USER:$HEROKU_API_KEY@git.heroku.com/client-side-next-js-project.git HEAD:master
     - deployed to the heroku server
   only:
-    - master
+    - develop
