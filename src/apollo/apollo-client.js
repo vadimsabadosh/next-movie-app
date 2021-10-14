@@ -42,8 +42,8 @@ const authLink = setContext((_, { headers }) => {
 })
 
 const httpLink = new HttpLink({
-	// uri: process.env.NEXT_PUBLIC_API_URL
-	uri: 'https://radiant-oasis-74595.herokuapp.com/graphql'
+	uri: process.env.NEXT_PUBLIC_API_URL
+	// uri: 'https://radiant-oasis-74595.herokuapp.com/graphql'
 })
 
 const link = ApolloLink.from([errorLink, retryLink, authLink, httpLink])
