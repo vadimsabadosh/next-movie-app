@@ -18,7 +18,7 @@ const Menu: React.FC = () => {
 	const router = useRouter()
 
 	return (
-		<ul className={styles.menu}>
+		<ul className={styles.menu} data-cy="menu-list">
 			{menuList.map((link) => {
 				const getClass = classnames(styles.menu_link, {
 					[styles.menu_linkActive]: router.asPath === link.url

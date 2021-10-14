@@ -7,7 +7,6 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
 import { useMutation } from '@apollo/client'
 import { REGISTER_USER } from 'src/graphql/mutation'
-import { useRouter } from 'next/router'
 import { useAuth } from 'src/context/auth'
 import Preloader from 'src/components/elements/Preloader'
 import FormErrors from '../FormErrors'
@@ -56,7 +55,6 @@ const RegisterForm: React.FC<{ openLogin: () => void; toggleModal: () => void }>
 	toggleModal
 }) => {
 	const [apiErrors, setErrors] = useState({})
-	const router = useRouter()
 	const context = useAuth()
 	const {
 		register,
@@ -75,7 +73,6 @@ const RegisterForm: React.FC<{ openLogin: () => void; toggleModal: () => void }>
 		async onCompleted(data) {
 			context.login(data.registerUser)
 			toggleModal()
-			await router.push('/account', undefined, { shallow: true })
 		},
 		onError(err) {
 			setErrors(err.graphQLErrors[0].extensions.errors)
@@ -95,7 +92,9 @@ const RegisterForm: React.FC<{ openLogin: () => void; toggleModal: () => void }>
 
 	return (
 		<div className={styles.form}>
-			<div className={styles.form_title}>Регистрация</div>
+			<div className={styles.form_title} data-cy="register">
+				Регистрация
+			</div>
 			<form onSubmit={handleSubmit(onSubmit)}>
 				{registerFields.map((field) => (
 					<Input
