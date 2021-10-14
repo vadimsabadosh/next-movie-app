@@ -16,7 +16,7 @@ module.exports = {
 		prependData: `@import "mixin/mixins";`
 	},
 	env: {
-		NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL
+		NEXT_PUBLIC_API_URL: 'https://radiant-oasis-74595.herokuapp.com/graphql'
 	}
 	// basePath: '/project'
 }
