@@ -23,6 +23,8 @@ dist
 
 # production
 /build
+.nyc_output
+/dist
 
 # misc
 .DS_Store
