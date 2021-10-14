@@ -37,6 +37,9 @@ test:
 deploy:
   stage: deploy
   image: node:14-alpine
+  before_script:
+    - apk update && apk add git
+    - git --version
   script:
     - git push https://$HEROKU_USER:$HEROKU_API_KEY@git.heroku.com/client-side-next-js-project.git HEAD:master
     - deployed to the heroku server
