@@ -42,6 +42,5 @@ deploy:
     - git --version
   script:
     - git push https://$HEROKU_USER:$HEROKU_API_KEY@git.heroku.com/client-side-next-js-project.git HEAD:master
-    - deployed to the heroku server
   only:
     - develop
