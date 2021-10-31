@@ -1,13 +1,21 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+# compiled
+*.min.*
+dist
+
+.idea
+
 # dependencies
 /node_modules
 /.pnp
 .pnp.js
-.env
 
 # testing
 /coverage
+/cypress-coverage
+/jest-coverage
+.nyc_output
 
 # next.js
 /.next/

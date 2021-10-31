@@ -2,21 +2,21 @@ import React from 'react'
 import { GetServerSideProps } from 'next'
 import { apolloClient } from 'src/apollo/apollo-client'
 import { GET_MOVIE } from 'src/graphql/query'
-import Movie from 'src/components/modules/Movie'
+import MoviePage from 'src/components/modules/MoviePage'
 import Head from 'next/head'
 
-const MoviePage = ({ movie }) => {
+const Movie = ({ movie }) => {
 	return (
 		<>
 			<Head>
 				<title>Фильм {movie.title}</title>
 			</Head>
-			<Movie movie={movie} />
+			<MoviePage movie={movie} />
 		</>
 	)
 }
 
-export default MoviePage
+export default Movie
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
 	const { query } = ctx
 	const { id } = query

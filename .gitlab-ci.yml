@@ -1,27 +1,46 @@
 stages:
-  - build
   - test
+  - build
+  - deploy
+
+image: docker:19.03.10
+services:
+  - docker:18.09-dind
 
 build:
   stage: build
   image:
     name: node:14-alpine
+  cache:
+    paths:
+      - node_modules
   artifacts:
     paths:
       - dist
       - node_modules
     expire_in: 1 week
-
-  cache:
-    paths:
-      - node_modules
   before_script:
     - npm ci
   script:
     - npm run build
 
 test:
+  image: cypress/base
   stage: test
-  image: node:14-alpine
   script:
-    - npm install
+    - npm ci
+    - npm run e2e:run
+  cache:
+    paths:
+      - node_modules
+
+deploy:
+  stage: deploy
+  image: node:14-alpine
+  before_script:
+    - apk update && apk add git
+    - git --version
+  script:
+    - git push https://$HEROKU_USER:$HEROKU_API_KEY@git.heroku.com/client-side-next-js-project.git HEAD:master
+  only:
+    - develop

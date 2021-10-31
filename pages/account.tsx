@@ -1,16 +1,16 @@
 import React from 'react'
-import Account from 'src/components/modules/Account'
+import AccountPage from 'src/components/modules/AccountPage'
 import Head from 'next/head'
 
-const AccountPage = () => {
+const Account = () => {
 	return (
 		<>
 			<Head>
 				<title>Аккаунт</title>
 			</Head>
-			<Account />
+			<AccountPage />
 		</>
 	)
 }
 
-export default AccountPage
+export default Account

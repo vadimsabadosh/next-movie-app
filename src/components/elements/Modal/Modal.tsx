@@ -27,7 +27,7 @@ const Modal: FC<{
 	return createPortal(
 		<div className={styles.modal__overlay} onMouseUp={onOverlay}>
 			<div className={styles.modal__dialog}>
-				<div className={styles.modal__content}>
+				<div className={styles.modal__content} data-cy="modal">
 					<button type="button" className={styles.close} onClick={toggleModal}>
 						&times;
 					</button>

@@ -8,7 +8,6 @@ import * as yup from 'yup'
 import { useMutation } from '@apollo/client'
 import { LOGIN_USER } from 'src/graphql/mutation'
 import { useAuth } from 'src/context/auth'
-import { useRouter } from 'next/router'
 import Preloader from '../Preloader'
 import FormErrors from '../FormErrors'
 
@@ -29,7 +28,6 @@ const LoginForm: React.FC<{ openRegister: () => void; toggleModal: () => void }>
 	toggleModal
 }) => {
 	const [apiErrors, setErrors] = useState({})
-	const router = useRouter()
 	const context = useAuth()
 
 	const {
@@ -44,7 +42,6 @@ const LoginForm: React.FC<{ openRegister: () => void; toggleModal: () => void }>
 		async onCompleted(data) {
 			context.login(data.loginUser)
 			toggleModal()
-			await router.push('/account', undefined, { shallow: true })
 		},
 		onError(err) {
 			setErrors(err.graphQLErrors[0].extensions.errors)
@@ -66,7 +63,9 @@ const LoginForm: React.FC<{ openRegister: () => void; toggleModal: () => void }>
 
 	return (
 		<div className={styles.loginForm}>
-			<div className={styles.loginForm_title}>Авторизация</div>
+			<div className={styles.loginForm_title} data-cy="login-title">
+				Авторизация
+			</div>
 			<form onSubmit={handleSubmit(onSubmit)}>
 				<Input
 					register={register}
