@@ -62,15 +62,21 @@ const PersonalDataTab: React.FC<{ user: any }> = ({ user }) => {
 			</h3>
 			<div className={styles.panel__item}>
 				<div className={styles.panel__name}>Имя:</div>
-				<div className={styles.panel__value}>{user?.firstName}</div>
+				<div className={styles.panel__value} data-cy="name">
+					{user?.firstName}
+				</div>
 			</div>
 			<div className={styles.panel__item}>
 				<div className={styles.panel__name}>Фамилия:</div>
-				<div className={styles.panel__value}>{user?.lastName}</div>
+				<div className={styles.panel__value} data-cy="lastName">
+					{user?.lastName}
+				</div>
 			</div>
 			<div className={styles.panel__item}>
 				<div className={styles.panel__name}>Почта:</div>
-				<div className={styles.panel__value}>{user?.email}</div>
+				<div className={styles.panel__value} data-cy="email">
+					{user?.email}
+				</div>
 			</div>
 		</div>
 	)

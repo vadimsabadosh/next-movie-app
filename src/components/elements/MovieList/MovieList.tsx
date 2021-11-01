@@ -8,7 +8,7 @@ const MovieList: React.FC<{ movies?: TMovie[] }> = ({ movies }) => {
 	return (
 		<>
 			<div className={styles.movie__list}>
-				{!movies.length && (
+				{!movies?.length && (
 					<div className={styles.movie__empty}>
 						<img src="/images/empty.png" alt="" />
 						<p className={styles.movie__empty_text}>Список пуст</p>

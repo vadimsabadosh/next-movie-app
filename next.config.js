@@ -18,5 +18,4 @@ module.exports = {
 	env: {
 		NEXT_PUBLIC_API_URL: 'https://radiant-oasis-74595.herokuapp.com/graphql'
 	}
-	// basePath: '/project'
 }
