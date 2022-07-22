@@ -6,29 +6,35 @@ import twitter from 'public/images/twitter.svg'
 import inst from 'public/images/instagram.svg'
 import styles from './FooterSocials.module.scss'
 
+const links = [
+	{
+		href: '#',
+		image: fb
+	},
+	{
+		href: '#',
+		image: twitter
+	},
+	{
+		href: '#',
+		image: linkedin
+	},
+	{
+		href: '#',
+		image: inst
+	}
+]
+
 const FooterSocials = () => {
 	return (
 		<ul className={styles.footer_socials}>
-			<li>
-				<a href="#" className={styles.footer_socialLink}>
-					<Image src={fb} alt="Facebook" />
-				</a>
-			</li>
-			<li>
-				<a href="#" className={styles.footer_socialLink}>
-					<Image src={twitter} alt="Facebook" />
-				</a>
-			</li>
-			<li>
-				<a href="#" className={styles.footer_socialLink}>
-					<Image src={linkedin} alt="Facebook" />
-				</a>
-			</li>
-			<li>
-				<a href="#" className={styles.footer_socialLink}>
-					<Image src={inst} alt="Facebook" />
-				</a>
-			</li>
+			{links.map((link) => (
+				<li key={link.image}>
+					<a href={link.href} className={styles.footer_socialLink}>
+						<Image src={link.image} alt="Facebook" />
+					</a>
+				</li>
+			))}
 		</ul>
 	)
 }

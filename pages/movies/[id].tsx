@@ -4,8 +4,9 @@ import { apolloClient } from 'src/apollo/apollo-client'
 import { GET_MOVIE } from 'src/graphql/query'
 import MoviePage from 'src/components/modules/MoviePage'
 import Head from 'next/head'
+import { TMovie } from 'src/types'
 
-const Movie = ({ movie }) => {
+const Movie: React.FC<{movie: TMovie}> = ({ movie }) => {
 	return (
 		<>
 			<Head>
@@ -23,7 +24,6 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 
 	try {
 		const response = await apolloClient.query({
-			fetchPolicy: 'network-only',
 			query: GET_MOVIE,
 			variables: { id }
 		})

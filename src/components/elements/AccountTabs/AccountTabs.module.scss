@@ -1,0 +1,44 @@
+.panel {
+	&__title {
+		text-align: left;
+		font-size: 22px;
+		margin-bottom: 30px;
+		font-weight: 800;
+		position: relative;
+		padding-left: 18px;
+
+		&::before {
+			position: absolute;
+			content: '';
+			background: linear-gradient(316.53deg, #26fff2 13.2%, #326cff 71.54%);
+			border-radius: 50px;
+			width: 8px;
+			height: 100%;
+			left: 0;
+			top: 0;
+		}
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		margin-bottom: 15px;
+	}
+
+	&__name {
+		width: 150px;
+		font-size: 18px;
+		font-weight: 600;
+	}
+
+	&__value {
+		font-size: 16px;
+	}
+
+	&__preloader {
+		height: 250px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}

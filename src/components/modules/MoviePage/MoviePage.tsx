@@ -8,7 +8,7 @@ import {
 	DELETE_FROM_WISH_LIST
 } from 'src/graphql/mutation'
 import dynamic from 'next/dynamic'
-import { constant } from 'src/utils/constants'
+import { CONSTANT } from 'src/utils/constants'
 import styles from './MoviePage.module.scss'
 import { useAuth } from 'src/context/auth'
 import { GET_USER_WANT_TO_WATCH_MOVIES, GET_USER_WATCHED_MOVIES } from 'src/graphql/query'
@@ -80,7 +80,7 @@ const MoviePage: React.FC<{ movie: TMovie }> = ({ movie }) => {
 			<div className={styles.movie}>
 				<div className={styles.movie__left}>
 					<img
-						src={constant.IMAGE_LINK + movie.poster_path}
+						src={CONSTANT.IMAGE_LINK + movie.poster_path}
 						alt={movie.title}
 						title={movie.title}
 						className={styles.movie__poster}

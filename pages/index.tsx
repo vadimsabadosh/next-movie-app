@@ -4,10 +4,10 @@ import MainScreen from 'src/components/modules/MainScreen'
 import MoviesBlock from 'src/components/modules/MoviesBlock'
 import { apolloClient } from 'src/apollo/apollo-client'
 import { GET_ALL_MOVIES } from 'src/graphql/query'
-import { TMovie } from 'src/types'
+import { TMovies } from 'src/types'
 import Head from 'next/head'
 
-const Home: React.FC<{ movies: TMovie[] }> = ({ movies }) => {
+const Home: React.FC<TMovies> = ({ movies }) => {
 	return (
 		<>
 			<Head>
@@ -19,11 +19,9 @@ const Home: React.FC<{ movies: TMovie[] }> = ({ movies }) => {
 		</>
 	)
 }
-export default Home
 export const getServerSideProps: GetServerSideProps = async () => {
 	try {
 		const response = await apolloClient.query({
-			fetchPolicy: 'network-only',
 			query: GET_ALL_MOVIES
 		})
 
@@ -43,3 +41,5 @@ export const getServerSideProps: GetServerSideProps = async () => {
 		}
 	}
 }
+
+export default Home

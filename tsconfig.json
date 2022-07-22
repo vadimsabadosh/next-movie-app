@@ -21,7 +21,7 @@
 		"types": ["cypress"]
 	},
 	"exclude": ["node_modules", "typings"],
-	"include": ["**/*.ts", "**/*.tsx", "next-env.d.ts", "next.config.js"],
+	"include": ["**/*.ts", "**/*.tsx", "next-env.d.ts", "next.config.js", "customServer.js"],
 	"paths": {
 		"@styles/*": ["src/styles/*"]
 	}

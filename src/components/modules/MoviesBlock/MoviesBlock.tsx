@@ -3,10 +3,10 @@ import styles from './MoviesBlock.module.scss'
 import MovieList from 'src/components/elements/MovieList'
 import Button from 'src/components/elements/Button'
 import Title from 'src/components/elements/Title'
-import { TMovie } from 'src/types'
+import { TMovies } from 'src/types'
 import { useRouter } from 'next/router'
 
-const MoviesBlock: React.FC<{ movies: TMovie[] }> = ({ movies }) => {
+const MoviesBlock: React.FC<TMovies> = ({ movies }) => {
 	const router = useRouter()
 
 	const onClick = async () => {

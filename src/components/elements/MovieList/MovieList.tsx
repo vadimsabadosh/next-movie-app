@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import { TMovie } from 'src/types'
 import styles from './MovieList.module.scss'
-import { constant } from 'src/utils/constants'
+import { CONSTANT } from 'src/utils/constants'
 
 const MovieList: React.FC<{ movies?: TMovie[] }> = ({ movies }) => {
 	return (
@@ -20,7 +20,7 @@ const MovieList: React.FC<{ movies?: TMovie[] }> = ({ movies }) => {
 							<Link href={`/movies/${movie.id}`}>
 								<a>
 									<img
-										src={constant.IMAGE_LINK + movie.poster_path}
+										src={CONSTANT.IMAGE_LINK + movie.poster_path}
 										alt={movie.original_title}
 										title={movie.title}
 										className={styles.movie__image}

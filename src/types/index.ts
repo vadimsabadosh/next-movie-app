@@ -18,3 +18,6 @@ export type TUser = {
 	watched_films: Array<TMovie>
 	wish_list: Array<TMovie>
 }
+export type TMovies = {
+	movies: TMovie[]
+}
